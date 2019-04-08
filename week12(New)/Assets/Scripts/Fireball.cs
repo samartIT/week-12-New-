@@ -7,21 +7,18 @@ public class Fireball : MonoBehaviour
     public float speed = 10f;
     int damage = 1;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, speed * Time.deltaTime);
+        transform.Translate(0, 0, speed * Time.deltaTime);    
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        PlayerChatactor player = other.GetComponent<PlayerChatactor>();
-        if (player != null)
-        {
+        PlayerCharacter player = other.GetComponent<PlayerCharacter>();
+        if (player != null) {
             //Debug.Log("Player hit");
             player.Hurt(damage);
         }
         Destroy(gameObject);
     }
-
 }

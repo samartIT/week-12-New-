@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerChatactor : MonoBehaviour
+public class PlayerCharacter : MonoBehaviour
 {
     private int _health;
-
     // Start is called before the first frame update
     void Start()
     {
