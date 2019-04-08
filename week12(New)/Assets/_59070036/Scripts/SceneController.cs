@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        false(_enemy == null)
+        if(_enemy == null)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(0, 1, 0);
